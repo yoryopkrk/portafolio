@@ -1,0 +1,14 @@
+.conf-row-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(90deg, rgba( 39, 64, 94 ), rgba( 136, 182, 215 ));
+    color: white;
+    opacity: 0.8;
+}
+
+.conf-card {
+    background-image: linear-gradient(90deg, rgba( 39, 64, 94 ), rgba( 136, 182, 215 ));
+    color: white;
+    opacity: 0.9;
+}

@@ -1,19 +1,41 @@
-<div class="row" style="display: flex; align-items: center; justify-content: center;">
-    <div class="col-6 text-center">
-        <div class="card text-center"
-            style="background-image: linear-gradient(90deg, rgba( 65, 10, 20 ), rgba( 37, 37, 39 )); color: white;">
-            <div class="card-header">
-                Destacado
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Tratamiento especial del título</h5>
-                <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.
-                </p>
-                <a href="#" class="btn btn-primary">Ir a algún lugar</a>
-            </div>
-            <div class="card-footer text-muted">
-                Hace 2 días
-            </div>
+<div class="row mt-2 mb-5 conf-row-card">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+        <div class="card text-center conf-card">
+            <form [formGroup]="submitForm" (ngSubmit)="onSubmit()" novalidate>
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Contacto</h5>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" formControlName="correo" placeholder="Correo">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" formControlName="telefono" placeholder="Teléfono" pattern="[0-9]{9}">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" placeholder="Agregue su comentario aquí"
+                        formControlName="comentario"></textarea>
+                    </div>
+                </div>
+                <div class="card-footer justify-content-center">
+                    <button type="submit" class="btn btn-initial mt-2 text-center" data-toggle="button"
+                        aria-pressed="false" autocomplete="off">
+                        <fa-icon class="fa-xl text-light" [icon]="faArrowUpRightFromSquare"></fa-icon>
+                    </button>
+                </div>
+
+                <!-- <button type="submit" [disabled]="onSubmitForm.invalid || flagNombre || flagPassword || flagRut"
+            class="btn btn-primary submit-btn btn-block" *ngIf="!cargando">
+            CREAR USUARIO
+        </button>
+        <button type="button" [disabled]="true"
+            class="btn btn-primary submit-btn btn-block" *ngIf="cargando">
+            <i class="fa fa-spin fa-sync"></i>
+            Espere...
+        </button> -->
+            </form>
         </div>
     </div>
 </div>

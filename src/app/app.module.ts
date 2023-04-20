@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { Section2Component } from './body/section2/section2.component';
 import { Section3Component } from './body/section3/section3.component';
 import { Section4Component } from './body/section4/section4.component';
 import { HeaderComponent } from './header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavbarfooterComponent } from './navbarfooter/navbarfooter.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,15 @@ import { HeaderComponent } from './header/header.component';
     Section2Component,
     Section3Component,
     Section4Component,
-    HeaderComponent
+    HeaderComponent,
+    NavbarfooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
