@@ -1,0 +1,22 @@
+<header>
+    <div id="main">
+        <div class="w3-teal navbar-dark conf-navbar">
+            <div class="row">
+                <div class="col-1">
+                    <div *ngIf="abrir == false">
+                        <button id="openNav" class="btn-initial text-light mt-2 ms-2"
+                            (click)="openSidebar()">&#9776;</button>
+                    </div>
+
+                    <div *ngIf="abrir == true">
+                        <button id="openNav" class="btn-initial text-light mt-2 ms-2"
+                            (click)="closeSidebar()">&#9776;</button>
+                    </div>
+                </div>
+                <div class="col-11 mt-2 letras">
+                    <h3>{{ appName }} <sup>{{ versionApp }}</sup></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

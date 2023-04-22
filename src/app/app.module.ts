@@ -4,16 +4,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { BodyComponent } from './body/body.component';
-import { Section1Component } from './body/section1/section1.component';
-import { Section2Component } from './body/section2/section2.component';
-import { Section3Component } from './body/section3/section3.component';
-import { Section4Component } from './body/section4/section4.component';
-import { HeaderComponent } from './header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BodyComponent } from './components/body/body.component';
+import { Section1Component } from './components/body/section1/section1.component';
+import { Section2Component } from './components/body/section2/section2.component';
+import { Section3Component } from './components/body/section3/section3.component';
+import { Section4Component } from './components/body/section4/section4.component';
+import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NavbarfooterComponent } from './navbarfooter/navbarfooter.component';
+import { NavbarfooterComponent } from './components/navbarfooter/navbarfooter.component';
 
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
