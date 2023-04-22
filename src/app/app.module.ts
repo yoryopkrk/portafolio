@@ -17,6 +17,7 @@ import { NavbarfooterComponent } from './navbarfooter/navbarfooter.component';
 
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     Section3Component,
     Section4Component,
     HeaderComponent,
-    NavbarfooterComponent
+    NavbarfooterComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
