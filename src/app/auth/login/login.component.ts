@@ -90,7 +90,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         'usuario.entity.Roles[0].descripcion'
       );
 
-      this.router.navigate(['../../dashboard']);
+      this.router.navigate(['dashboard']);
     } else {
       if (usuario.entity === null) {
         let mensaje = usuario.message + ', ingrese los datos nuevamente.';
