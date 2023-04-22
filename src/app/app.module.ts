@@ -15,6 +15,9 @@ import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarfooterComponent } from './navbarfooter/navbarfooter.component';
 
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +33,8 @@ import { NavbarfooterComponent } from './navbarfooter/navbarfooter.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    HttpClientModule,
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,

@@ -1,0 +1,18 @@
+.imagen {
+    background: url(../../../assets/images/fondo2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.conf-card {
+    background-color: #27405e;
+    color: white;
+    opacity: 0.8;
+}
+
+.conf-row-card {
+    background-image: linear-gradient(90deg, rgba( 39, 64, 94 ), rgba( 136, 182, 215 ));
+    color: white;
+    opacity: 0.8;
+}

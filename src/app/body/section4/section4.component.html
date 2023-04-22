@@ -6,35 +6,75 @@
                     <h5 class="card-title mb-4">Contacto</h5>
 
                     <div class="mb-3">
-                        <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+                                <span class="input-group-text">
+                                    <div *ngIf="submitForm.getRawValue()!.nombre!.length >= 9 && submitForm.getRawValue()!.nombre != null">
+                                        <fa-icon class="fa-xl text-primary" [icon]="faCircleCheck"></fa-icon>
+                                    </div>
+                                    <div
+                                        *ngIf="submitForm.get('nombre')!.value == '' || submitForm.getRawValue()!.nombre!.length < 9">
+                                        <fa-icon class="fa-xl text-dark" [icon]="faTimesCircle"></fa-icon>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="mb-3">
-                        <input type="text" class="form-control" formControlName="correo" placeholder="Correo">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" formControlName="correo" placeholder="Correo">
+                                <span class="input-group-text">
+                                    <div *ngIf="submitForm.get('correo')!.valid">
+                                        <fa-icon class="fa-xl text-primary" [icon]="faCircleCheck"></fa-icon>
+                                    </div>
+                                    <div *ngIf="!submitForm.get('correo')!.valid">
+                                        <fa-icon class="fa-xl text-dark" [icon]="faTimesCircle"></fa-icon>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="mb-3">
-                        <input type="text" class="form-control" formControlName="telefono" placeholder="Teléfono" pattern="[0-9]{9}">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" formControlName="telefono"
+                                    placeholder="Teléfono">
+                                <span class="input-group-text">
+                                    <fa-icon class="fa-xl text-primary" [icon]="faCircleCheck"></fa-icon>
+                                </span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="mb-3">
-                        <textarea class="form-control" placeholder="Agregue su comentario aquí"
-                        formControlName="comentario"></textarea>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <textarea class="form-control" placeholder="Agregue su comentario aquí"
+                                    formControlName="comentario"></textarea>
+                                <span class="input-group-text">
+                                    <fa-icon class="fa-xl text-primary" [icon]="faCircleCheck"></fa-icon>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer justify-content-center">
-                    <button type="submit" class="btn btn-initial mt-2 text-center" data-toggle="button"
-                        aria-pressed="false" autocomplete="off">
+                    <span class="text-light" *ngIf="mensaje">
+                        &nbsp;<strong>{{ mensaje }}</strong>
+                    </span>
+                    <button type="submit" [disabled]="submitForm.invalid" class="btn btn-initial mt-2 text-center" *ngIf="!cargando" data-toggle="button"
+                    aria-pressed="false" autocomplete="off">
                         <fa-icon class="fa-xl text-light" [icon]="faArrowUpRightFromSquare"></fa-icon>
                     </button>
+                    <button type="button" [disabled]="true" class="btn btn-primary submit-btn btn-block" *ngIf="cargando">
+                        <fa-icon class="fa-xl text-light" [icon]="faSpinner"></fa-icon>
+                        Espere...
+                    </button>
                 </div>
-
-                <!-- <button type="submit" [disabled]="onSubmitForm.invalid || flagNombre || flagPassword || flagRut"
-            class="btn btn-primary submit-btn btn-block" *ngIf="!cargando">
-            CREAR USUARIO
-        </button>
-        <button type="button" [disabled]="true"
-            class="btn btn-primary submit-btn btn-block" *ngIf="cargando">
-            <i class="fa fa-spin fa-sync"></i>
-            Espere...
-        </button> -->
             </form>
         </div>
     </div>
