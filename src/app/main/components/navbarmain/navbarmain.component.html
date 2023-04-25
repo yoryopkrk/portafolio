@@ -2,21 +2,40 @@
     <div id="main">
         <div class="w3-teal navbar-dark conf-navbar">
             <div class="row">
-                <div class="col-1">
-                    <div *ngIf="abrir == false">
-                        <button id="openNav" class="btn-initial text-light mt-2 ms-2"
-                            (click)="openSidebar()">&#9776;</button>
+                <div class="btn-sidebar">
+                    <div class="row">
+                        <div class="col-1">
+                            <div *ngIf="abrir == false">
+                                <button id="openNav" class="btn-initial text-light mt-2 ms-2"
+                                    (click)="openSidebar()">&#9776;</button>
+                            </div>
+        
+                            <div *ngIf="abrir == true">
+                                <button id="openNav" class="btn-initial text-light mt-2 ms-2"
+                                    (click)="closeSidebar()">&#9776;</button>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <div class="mt-2 letras">
+                                <h3>{{ appName }} <sup>{{ versionApp }}</sup></h3>
+                            </div>                        
+                        </div>
                     </div>
-
-                    <div *ngIf="abrir == true">
-                        <button id="openNav" class="btn-initial text-light mt-2 ms-2"
-                            (click)="closeSidebar()">&#9776;</button>
-                    </div>
-                </div>
-                <div class="col-11 mt-2 letras">
-                    <h3>{{ appName }} <sup>{{ versionApp }}</sup></h3>
                 </div>
             </div>
+
+            <ul class="navbar-nav mt-1 mb-3 mb-lg-0 navbar-xs">
+                <li class="nav-item">
+                    <div class="row">
+                        <ul class="mt-1 mb-3 mb-lg-0">
+                            <button type="button" class="btn btn-navbar me-2 ms-2 mb-2 mt-2" data-toggle="button"
+                                aria-pressed="false" autocomplete="off" routerLink="contacto" routerLinkActive="active">
+                                Contacto
+                            </button>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </header>

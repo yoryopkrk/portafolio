@@ -1,69 +1,176 @@
-import { Component, OnInit } from '@angular/core';
-//import Chart from 'chart.js/auto';
-import { getRelativePosition } from 'chart.js/helpers';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
-import { Chart, registerables } from 'chart.js';
-Chart.register(...registerables);
+import {
+  ApexAxisChartSeries,
+  ApexChart,
+  ChartComponent,
+  ApexDataLabels,
+  ApexPlotOptions,
+  ApexYAxis,
+  ApexLegend,
+  ApexStroke,
+  ApexXAxis,
+  ApexFill,
+  ApexTooltip
+} from "ng-apexcharts";
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  dataLabels: ApexDataLabels;
+  plotOptions: ApexPlotOptions;
+  yaxis: ApexYAxis;
+  xaxis: ApexXAxis;
+  fill: ApexFill;
+  tooltip: ApexTooltip;
+  stroke: ApexStroke;
+  legend: ApexLegend;
+};
 
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
 })
-export class ChartComponent implements OnInit {
+export class Chart1Component implements OnInit {
 
-  constructor() { }
+  @ViewChild("chart") chart!: ChartComponent;
+  public chartOptions: Partial<ChartOptions>;
 
-  ngOnInit(): void {
-    var myChart = new Chart("myChart", {
-      type: 'bar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-        }]
+  @ViewChild("chart1") chart1!: ChartComponent;
+  public chartOptions1: Partial<ChartOptions>;
+
+  constructor() {
+    this.chartOptions = {
+      series: [
+        {
+          name: "Net Profit",
+          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+        },
+        {
+          name: "Revenue",
+          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+        },
+        {
+          name: "Free Cash Flow",
+          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+        }
+      ],
+      chart: {
+        type: "bar",
+        height: 350
       },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: "55%",
+          //endingShape: "rounded"
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ["transparent"]
+      },
+      xaxis: {
+        categories: [
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct"
+        ]
+      },
+      yaxis: {
+        title: {
+          text: "$ (thousands)"
+        }
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function(val) {
+            return "$ " + val + " thousands";
           }
         }
       }
-    });
+    };
+
+    this.chartOptions1 = {
+      series: [
+        {
+          name: "Net Profit",
+          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+        },
+        {
+          name: "Revenue",
+          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+        },
+        {
+          name: "Free Cash Flow",
+          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+        }
+      ],
+      chart: {
+        type: "bar",
+        height: 350
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: "55%",
+          //endingShape: "rounded"
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ["transparent"]
+      },
+      xaxis: {
+        categories: [
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct"
+        ]
+      },
+      yaxis: {
+        title: {
+          text: "$ (thousands)"
+        }
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function(val) {
+            return "$ " + val + " thousands";
+          }
+        }
+      }
+    };
   }
 
+  ngOnInit(): void {
 
-  // const chart = new Chart(ctx, {
-  //   type: 'line',
-  //   data: data,
-  //   options: {
-  //     onClick: (e) => {
-  //       const canvasPosition = getRelativePosition(e, chart);
-
-  //       // Substitute the appropriate scale IDs
-  //       const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
-  //       const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
-  //     }
-  //   }
-  // });
-
+  }
 }

@@ -1,28 +1,28 @@
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left conf-sidebar"
     style="display: none;" id="mySidebar">
-    <ul class="nav">
+    <!-- <ul class="nav">
         <li class="nav-item nav-profile">
             <div class="nav-link">
                 <div class="user-wrapper ps-4 pe-4 mb-2">
                     <div class="profile-image mt-3 mb-3 ms-5 me-5">
-                        <!-- <img class="rounded-circle" src="assets/images/faces/face1.jpg" alt="profile image"> -->
+                        <img class="rounded-circle" src="assets/images/faces/face1.jpg" alt="profile image">
                     </div>
                     <div class="text-wrapper" style="text-align: center;">
-                        <!-- <p class="profile-name h5" style="color: white">{{descripcion}}</p>
-                        <small class="designation h6" style="color: white">{{ arrayRol }}</small> -->
+                        <p class="profile-name h5" style="color: white">{{descripcion}}</p>
+                        <small class="designation h6" style="color: white">{{ arrayRol }}</small>
                     </div>
                 </div>
             </div>
         </li>
-    </ul>
+    </ul> -->
 
     <nav class="sidebar">
-        <ul class="nav flex-column ms-3 conf-sidebar">
-            <a class="light-blue-bg pt-2 pb-2 text-light text-decoration-none" style="display: block;">
+        <ul class="nav flex-column conf-sidebar pt-5">
+            <a class="light-blue-bg pb-2 text-light text-decoration-none" style="display: block;">
                 <span class="ps-3">MENU</span>
             </a>
-            <a routerLink="contacto" class="nav-link conf-sidebar text-decoration-none" routerLinkActive="active">
-                <span>Contacto</span>
+            <a routerLink="contacto" class="conf-sidebar text-decoration-none text-light" routerLinkActive="active">
+                <span class="ps-3">Contacto</span>
             </a>
             <!-- <div class="group" *ngFor="let item of arrayMenu; let i = index">
                 <a *ngIf="item.isLayout" (click)="ddToggle(i, item.slug)"
@@ -46,9 +46,8 @@
             </div> -->
         </ul>
         <br>
-        <a (click)="logout()" class="light-blue-bg text-decoration-none conf-sidebar">
-            <i class="menu-icon fa fa-sign-out-alt" style="padding-left: 10px;"></i>
-            <span class="menu-title" style="padding-left: 10px;">Cerrar sesión</span>
+        <a (click)="logout()" class="light-blue-bg text-decoration-none conf-sidebar text-light">
+            <span class="ps-3">Cerrar sesión</span>
         </a>
     </nav>
 </div>

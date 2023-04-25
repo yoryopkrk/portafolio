@@ -11,7 +11,7 @@ export class NavbarmainComponent implements OnInit {
   abrir: boolean = false;
 
   appName: string = 'Dashboard';
-  versionApp: string = 'v1';
+  versionApp: string = '';
 
   constructor() { }
 
@@ -21,33 +21,28 @@ export class NavbarmainComponent implements OnInit {
 
   openSidebar() {
     this.abrir = true;
-    document.getElementById("main")!.style.marginLeft = "0%";
-    document.getElementById("mySidebar")!.style.width = "265px";
+    document.getElementById("main")!.style.marginLeft = "0px";
+    document.getElementById("mySidebar")!.style.width = "180px";
     document.getElementById("mySidebar")!.style.display = "block";
     document.getElementById("openNav")!.style.display = 'none';
-    document.getElementById("box")!.style.marginLeft = "265px";
-    document.getElementById("box")!.style.width = "85%";
+    //document.getElementById("box")!.style.marginLeft = "30px";
+    //document.getElementById("box")!.style.width = "97%";
   }
 
   closeSidebar() {
     this.abrir = false;
-    document.getElementById("main")!.style.marginLeft = "0%";
+    document.getElementById("main")!.style.marginLeft = "0px";
     document.getElementById("mySidebar")!.style.display = "none";
     document.getElementById("openNav")!.style.display = "inline-block";
-    document.getElementById("box")!.style.marginLeft = "0px";
-    document.getElementById("box")!.style.width = "100%";
+    //document.getElementById("box")!.style.marginLeft = "10px";
+    //document.getElementById("box")!.style.width = "100%";
   }
 
   openNav() {
     if (this.abrir == false) {
-      //document.getElementById("UserDropdown")!.style.width = "250px";
       this.abrir = true;
     } else {
       if (this.abrir == true) {
-        let roles = JSON.parse(sessionStorage?.getItem('descripcionRol')!);
-        console.log('roles ', roles);
-        //this.alertasService.openUserInfo(this.descripcion, roles);
-        //document.getElementById("UserDropdown")!.style.width = "0px";
         this.abrir = false;
       }
     }

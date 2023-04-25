@@ -7,7 +7,9 @@ import { NavbarmainComponent } from '../components/navbarmain/navbarmain.compone
 import { SidebarmainComponent } from '../components/sidebarmain/sidebarmain.component';
 import { FootermainComponent } from '../components/footermain/footermain.component';
 import { ContactoComponent } from '../contacto/contacto.component';
-import { ChartComponent } from '../components/chart/chart.component';
+import { Chart1Component } from '../components/chart/chart.component';
+import { Chart2Component } from '../components/chart2/chart2.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { ChartComponent } from '../components/chart/chart.component';
     SidebarmainComponent,
     FootermainComponent,
     ContactoComponent,
-    ChartComponent
+    Chart1Component,
+    Chart2Component
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    NgApexchartsModule
   ]
 })
 export class DashboardModule { }

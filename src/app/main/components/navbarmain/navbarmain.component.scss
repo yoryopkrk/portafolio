@@ -5,8 +5,8 @@
 }
 
 .conf-navbar {
-    min-height: 100%; 
-    background-image: linear-gradient(90deg, rgba( 39, 64, 94 ), rgba( 136, 182, 215 ));
+    min-height: 100%;
+    background-image: linear-gradient(90deg, rgba(39, 64, 94), rgba(136, 182, 215));
 }
 
 .btn-initial.active,
@@ -26,4 +26,39 @@
     border-radius: 20px;
     border-color: #252527;
     width: 48px;
+}
+
+.btn-navbar.active,
+.btn-navbar:active,
+.btn-navbar:focus,
+.btn-navbar:hover {
+    text-decoration: none;
+    background-color: #27405e;
+    border-radius: 20px;
+    border-color: #252527;
+    width: 120px;
+}
+
+.btn-navbar {
+    text-decoration: none;
+    background-color: #88b6d7;
+    border-radius: 20px;
+    border-color: #252527;
+    width: 120px;
+}
+
+@media (min-width: 992px) {
+    .navbar-xs {
+        display: none;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 991px) {
+    #openNav {
+        display: none;
+    }
+
+    .btn-sidebar {
+        display: none;
+    }
 }
