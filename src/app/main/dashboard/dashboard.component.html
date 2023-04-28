@@ -1,23 +1,12 @@
-<app-navbarmain></app-navbarmain>
 
-<div class="row">
-    <div class="col-xl-1 col-lg-1">
-        <app-sidebarmain></app-sidebarmain>
+<router-outlet></router-outlet>
+ <div class="row">
+    <div class="col-12 mt-5">
+        <app-chart></app-chart>
     </div>
-    <div class="col-xl-11 col-lg-11 col-sm-12 col-md-12 col-xs-12">
-        <div class="container-fluid" id="box">
-            <div class="row">
-                <div class="col-12 mt-5">
-                    <app-chart></app-chart>
-                    <router-outlet></router-outlet>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 mt-5">
-                    <app-chart2></app-chart2>
-                </div>
-            </div>
-            <app-footermain></app-footermain>
-        </div>
+</div>
+<div class="row">
+    <div class="col-12 mt-5">
+        <app-chart2></app-chart2>
     </div>
 </div>
