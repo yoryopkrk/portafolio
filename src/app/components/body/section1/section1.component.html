@@ -1,28 +1,41 @@
-<div class="row mb-5 conf-row-card">
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-        <div class="card text-center conf-card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-2">
-                        <fa-icon class="fa-2xl text-light" [icon]="faGithub"></fa-icon>
+<section class="intro-section" id="acerca">
+    <div class="container">
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+                <p class="section-kicker">Perfil</p>
+                <h2>Software para operaciones reales, con foco en negocio y mantenibilidad.</h2>
+            </div>
+            <div class="col-lg-7">
+                <p class="intro-copy">
+                    Soy desarrollador de software en Chile, con experiencia construyendo aplicaciones
+                    web y de escritorio para gestión empresarial. Trabajo desde el levantamiento de
+                    requerimientos hasta implementación, pruebas, soporte y mejora continua.
+                </p>
+                <div class="highlight-list">
+                    <div class="highlight-item" *ngFor="let item of highlights">
+                        <span></span>
+                        <p>{{ item }}</p>
                     </div>
-                    <div class="col-2">
-                        <fa-icon class="fa-2xl text-light" [icon]="faTwitter"></fa-icon>                        
-                    </div>
-                    <div class="col-2">
-                        <fa-icon class="fa-2xl text-light" [icon]="faLinkedin"></fa-icon>                        
-                    </div>
-                    <div class="col-2">
-                        <fa-icon class="fa-2xl text-light" [icon]="faYoutube"></fa-icon>                        
-                    </div>
-                    <div class="col-2">
-                        <fa-icon class="fa-2xl text-light" [icon]="faFacebook"></fa-icon>                        
-                    </div>
-                    <div class="col-2">
-                        <fa-icon class="fa-2xl text-light" [icon]="faDiscord"></fa-icon>
-                    </div>
+                </div>
+                <div class="contact-strip">
+                    <a href="mailto:jor.sanchezv.90@gmail.com">
+                        <fa-icon [icon]="faEnvelope"></fa-icon>
+                        jor.sanchezv.90@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/jorges%C3%A1nchez-venegas-3389271b5" target="_blank" rel="noopener noreferrer">
+                        <fa-icon [icon]="faLinkedin"></fa-icon>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/yoryopkrk" target="_blank" rel="noopener noreferrer">
+                        <fa-icon [icon]="faGithub"></fa-icon>
+                        GitHub
+                    </a>
+                    <span>
+                        <fa-icon [icon]="faLocationDot"></fa-icon>
+                        Santiago, Chile
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

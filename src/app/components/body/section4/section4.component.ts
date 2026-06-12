@@ -2,11 +2,12 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { faArrowUpRightFromSquare, faCircleCheck, faTimesCircle, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faCircleCheck, faTimesCircle, faSpinner, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { ContactoService } from '@services/contacto.service';
 import { MailService } from '@services/mail-service.service';
 
 @Component({
+  standalone: false,
   selector: 'app-section4',
   templateUrl: './section4.component.html',
   styleUrls: ['./section4.component.scss']
@@ -25,11 +26,12 @@ export class Section4Component implements OnInit {
 
   ngOnInit(): void {
     this.submitForm = this.fb.group({
+  standalone: false,
       id: '',
-      nombre: ['', Validators.required],
+      nombre: ['', [Validators.required, Validators.minLength(3)]],
       correo: ['', [Validators.required, Validators.email]],
       telefono: '',
-      comentario: ''
+      comentario: ['', Validators.required]
     });
   }
 
@@ -37,13 +39,15 @@ export class Section4Component implements OnInit {
   faCircleCheck = faCircleCheck;
   faTimesCircle = faTimesCircle;
   faSpinner = faSpinner;
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
   
   onSubmit() {
     if (this.submitForm.invalid) { return; }
 
     const { nombre, correo, telefono, comentario } = this.submitForm.value;
 
-    let email = 'yoryo.punkrist@gmail.com';
+    let email = 'jor.sanchezv.90@gmail.com';
 
     let infoCorreo = {
       cualNotificacion: 0,

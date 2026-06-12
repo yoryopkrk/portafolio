@@ -5,6 +5,7 @@ import { MenuItem } from "./menu.model";
 import { MENU } from "./menu";
 
 @Component({
+  standalone: false,
   selector: 'app-sidebarmain',
   templateUrl: './sidebarmain.component.html',
   styleUrls: ['./sidebarmain.component.scss']

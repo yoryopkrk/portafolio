@@ -11,6 +11,7 @@ import { Usuario } from "@models/usuario";
 import { faArrowUpRightFromSquare, faCheckCircle, faTimesCircle, faSpinner, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
+  standalone: false,
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
@@ -38,6 +39,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnInit() {
     sessionStorage.clear();
     this.loginForm = this.fb.group({
+  standalone: false,
       email: ['', [Validators.required, Validators.email, Validators.minLength(10), Validators.maxLength(50)]],
       password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(24)]],
     });

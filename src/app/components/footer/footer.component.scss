@@ -1,5 +1,23 @@
-.nombre {
-    font-family: monospace;
-    color: #bbb8b5;
+.site-footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 20px 0;
+}
+
+.site-footer .container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.site-footer a {
+    color: #bae6fd;
     text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: #ffffff;
 }
