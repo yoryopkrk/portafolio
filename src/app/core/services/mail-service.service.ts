@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { cons } from '@conf/constants';
 
 import { Correo } from "@core/models/correo";
 import { environment } from '@environments/environment';
@@ -16,7 +15,7 @@ export class MailService {
 
   createTransport(correo: Correo) {
     const url: string = `${environment.apiUrl}/correos/createTransport`;
-    return this.http.post(url, correo).subscribe(data => {
+    return this.http.post(url, correo).subscribe((data: any) => {
       console.log(data);
     });
   }

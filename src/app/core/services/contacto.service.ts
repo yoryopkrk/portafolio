@@ -31,21 +31,21 @@ export class ContactoService {
 
   postContacto(contacto: Contacto) {
     const url: string = `${environment.apiUrl}/contactos/postContacto`;
-    return this.http.post(url, contacto).subscribe(data => {
+    return this.http.post(url, contacto).subscribe((data: any)  => {
       console.log(data);
     });
   }
 
   putContacto(contacto: Contacto, id: number) {
     const url: string = `${environment.apiUrl}/contactos/putContacto/${id}`;
-    return this.http.put(url, contacto).subscribe(data => {
+    return this.http.put(url, contacto).subscribe((data: any)  => {
       console.log(data);
     });
   }
 
   deleteContacto(id: number) {
     const url = `${environment.apiUrl}/contactos/deleteContacto/${id}`;
-    return this.http.delete(url).subscribe(data => {
+    return this.http.delete(url).subscribe((data: any)  => {
       console.log(data);
     });
   }
