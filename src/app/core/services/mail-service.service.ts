@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { cons } from '@conf/constants';
 
 import { Correo } from "@core/models/correo";
+import { environment } from '@environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class MailService {
   ) {}
 
   createTransport(correo: Correo) {
-    const url: string = cons.http + '//' + cons.backend + cons.api + '/correos/createTransport';
+    const url: string = `${environment.apiUrl}/correos/createTransport`;
     return this.http.post(url, correo).subscribe(data => {
       console.log(data);
     });
