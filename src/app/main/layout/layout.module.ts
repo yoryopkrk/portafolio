@@ -5,7 +5,6 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { Chart1Component } from '../dashboard/components/chart/chart.component';
 import { Chart2Component } from '../dashboard/components/chart2/chart2.component';
-import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
   ],
   imports: [
     CommonModule,
-    LayoutRoutingModule,
-    NgApexchartsModule
+    LayoutRoutingModule
   ]
 })
 export class LayoutModule { }
