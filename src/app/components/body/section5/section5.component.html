@@ -1,0 +1,37 @@
+<section class="apps-section" id="aplicaciones">
+    <div class="container">
+        <div class="section-heading">
+            <p>Aplicaciones personales</p>
+            <h2>Proyectos propios, fuera del trabajo, desplegados y con codigo disponible para revisar.</h2>
+        </div>
+
+        <div class="apps-grid">
+            <article class="app-card" *ngFor="let app of apps">
+                <div class="app-card__header">
+                    <h3>{{ app.name }}</h3>
+                    <span class="app-status" [class.app-status--live]="app.deployed">
+                        {{ app.deployed ? 'En produccion' : 'Solo codigo' }}
+                    </span>
+                </div>
+                <p>{{ app.description }}</p>
+                <div class="stack-list">
+                    <span *ngFor="let tech of app.tech">{{ tech }}</span>
+                </div>
+                <div class="app-card__actions">
+                    <a *ngIf="app.demoUrl" [href]="app.demoUrl" target="_blank" rel="noopener noreferrer" class="app-link">
+                        <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
+                        Ver aplicacion
+                    </a>
+                    <a *ngIf="app.githubUrl" [href]="app.githubUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
+                        <fa-icon [icon]="faGithub"></fa-icon>
+                        Ver codigo
+                    </a>
+                    <a *ngIf="app.backendGithubUrl" [href]="app.backendGithubUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
+                        <fa-icon [icon]="faGithub"></fa-icon>
+                        Ver backend
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

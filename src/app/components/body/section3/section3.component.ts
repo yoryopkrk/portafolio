@@ -40,11 +40,12 @@ export class Section3Component implements OnInit {
     'PHP',
     'SQL Server',
     'MySQL',
+    'PostgreSQL',
     'Bootstrap',
     'RESTful APIs',
     'Microservicios',
+    'Google Cloud Platform (GCP)',
     'Google Kubernetes Engine',
-    'Netlify',
     'Scrum'
   ];
 

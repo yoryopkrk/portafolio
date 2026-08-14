@@ -11,6 +11,7 @@ import { Section1Component } from './components/body/section1/section1.component
 import { Section2Component } from './components/body/section2/section2.component';
 import { Section3Component } from './components/body/section3/section3.component';
 import { Section4Component } from './components/body/section4/section4.component';
+import { Section5Component } from './components/body/section5/section5.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarfooterComponent } from './components/navbarfooter/navbarfooter.component';
@@ -29,6 +30,7 @@ import { MainComponent } from './main/main.component';
     Section2Component,
     Section3Component,
     Section4Component,
+    Section5Component,
     HeaderComponent,
     NavbarfooterComponent,
     MainComponent
