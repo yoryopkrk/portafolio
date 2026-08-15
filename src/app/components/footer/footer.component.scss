@@ -12,6 +12,11 @@
     justify-content: space-between;
 }
 
+.footer-links {
+    display: flex;
+    gap: 18px;
+}
+
 .site-footer a {
     color: #bae6fd;
     text-decoration: none;

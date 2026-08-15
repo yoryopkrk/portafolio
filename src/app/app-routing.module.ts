@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MainComponent } from './main/main.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -10,12 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./main/main.module').then(m => m.MainModule)
   },
   {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    path: 'politica-privacidad',
+    component: PrivacyPolicyComponent
   },
   {
     path: 'not-found',
-    loadChildren: () => import('./not-found/not-found.module').then((m) => m.NotFoundModule)
+    component: NotFoundComponent
   },
   { path: '**', redirectTo: 'not-found' },
   {

@@ -1,0 +1,39 @@
+.not-found-section {
+    background: #ffffff;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.not-found-code {
+    color: #0284c7;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+h1 {
+    color: #0f172a;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+}
+
+.not-found-copy {
+    color: #475569;
+    margin: 16px auto 28px;
+    max-width: 480px;
+}
+
+.btn-primary {
+    background: #0f172a;
+    border-color: #0f172a;
+    border-radius: 6px;
+    font-weight: 800;
+    padding: 12px 22px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #0284c7;
+    border-color: #0284c7;
+}

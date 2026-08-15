@@ -19,6 +19,8 @@ import { NavbarfooterComponent } from './components/navbarfooter/navbarfooter.co
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { MainComponent } from './main/main.component';
     Section5Component,
     HeaderComponent,
     NavbarfooterComponent,
-    MainComponent
+    MainComponent,
+    PrivacyPolicyComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
