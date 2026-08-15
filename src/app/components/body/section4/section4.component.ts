@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { forkJoin } from 'rxjs';
 
 import { faArrowUpRightFromSquare, faCircleCheck, faTimesCircle, faSpinner, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { ContactoService } from '@services/contacto.service';
@@ -16,6 +17,7 @@ export class Section4Component implements OnInit {
 
   submitForm!: FormGroup;
   mensaje: string = '';
+  huboError: boolean = false;
   cargando: boolean = false;
 
   constructor(
@@ -26,7 +28,6 @@ export class Section4Component implements OnInit {
 
   ngOnInit(): void {
     this.submitForm = this.fb.group({
-  standalone: false,
       id: '',
       nombre: ['', [Validators.required, Validators.minLength(3)]],
       correo: ['', [Validators.required, Validators.email]],
@@ -67,21 +68,34 @@ export class Section4Component implements OnInit {
       correo: correo,
       telefono: telefono,
       comentario: comentario,
+      origen: 'portafolio',
       leido: 0,
       id_tipo_notificacion: 0
     }
 
-    if (infoCorreo) {
-      this.mensaje = 'Mensaje enviado correctamente';
+    this.cargando = true;
+    this.mensaje = '';
+    this.huboError = false;
 
-      this.mailService.createTransport(infoCorreo);
-      this.contactoService.postContacto(correoObj);
-      this.mailService.createTransport(correoRespuesta);
-
-      setTimeout(() => {
-        this.mensaje = '';
+    forkJoin([
+      this.mailService.createTransport(infoCorreo),
+      this.mailService.createTransport(correoRespuesta),
+      this.contactoService.postContacto(correoObj)
+    ]).subscribe({
+      next: () => {
+        this.cargando = false;
+        this.mensaje = 'Mensaje enviado correctamente';
         this.submitForm.reset();
-      }, 1500);
-    }
+
+        setTimeout(() => {
+          this.mensaje = '';
+        }, 3000);
+      },
+      error: () => {
+        this.cargando = false;
+        this.huboError = true;
+        this.mensaje = 'No se pudo enviar el mensaje. Intenta nuevamente o escribeme directo a mi correo.';
+      }
+    });
   }
 }

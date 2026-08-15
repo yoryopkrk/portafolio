@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { cons } from '@conf/constants';
 
 import { Contacto } from "../models/contacto";
-import { environment } from '@environments/environment.prod';
+import { environment } from '@environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -31,9 +31,7 @@ export class ContactoService {
 
   postContacto(contacto: Contacto) {
     const url: string = `${environment.apiUrl}/contactos/postContacto`;
-    return this.http.post(url, contacto).subscribe((data: any)  => {
-      console.log(data);
-    });
+    return this.http.post(url, contacto);
   }
 
   putContacto(contacto: Contacto, id: number) {

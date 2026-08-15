@@ -12,8 +12,6 @@ export class MailService {
 
   createTransport(correo: Correo) {
     const url: string = `${environment.apiUrl}/correos/createTransport`;
-    return this.http.post(url, correo).subscribe((data: any) => {
-      console.log(data);
-    });
+    return this.http.post(url, correo);
   }
 }

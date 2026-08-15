@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="form-actions">
-                        <span class="message" *ngIf="mensaje">{{ mensaje }}</span>
+                        <span class="message" [class.message--error]="huboError" *ngIf="mensaje">{{ mensaje }}</span>
                         <button type="submit" [disabled]="submitForm.invalid || cargando" class="btn btn-primary">
                             <fa-icon *ngIf="!cargando" [icon]="faArrowUpRightFromSquare"></fa-icon>
                             <fa-icon *ngIf="cargando" [icon]="faSpinner"></fa-icon>
