@@ -2,7 +2,7 @@
     <div class="container">
         <div class="section-heading">
             <p>Aplicaciones personales</p>
-            <h2>Proyectos propios, fuera del trabajo, desplegados y con codigo disponible para revisar.</h2>
+            <h2>Proyectos propios, fuera del trabajo, desplegados y con código disponible para revisar.</h2>
         </div>
 
         <div class="apps-grid">
@@ -10,7 +10,7 @@
                 <div class="app-card__header">
                     <h3>{{ app.name }}</h3>
                     <span class="app-status" [class.app-status--live]="app.deployed">
-                        {{ app.deployed ? 'En produccion' : 'Solo codigo' }}
+                        {{ app.deployed ? 'En producción' : 'Solo código' }}
                     </span>
                 </div>
                 <p>{{ app.description }}</p>
@@ -20,11 +20,11 @@
                 <div class="app-card__actions">
                     <a *ngIf="app.demoUrl" [href]="app.demoUrl" target="_blank" rel="noopener noreferrer" class="app-link">
                         <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
-                        Ver aplicacion
+                        Ver aplicación
                     </a>
                     <a *ngIf="app.githubUrl" [href]="app.githubUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
                         <fa-icon [icon]="faGithub"></fa-icon>
-                        Ver codigo
+                        Ver código
                     </a>
                     <a *ngIf="app.backendGithubUrl" [href]="app.backendGithubUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
                         <fa-icon [icon]="faGithub"></fa-icon>

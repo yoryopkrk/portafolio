@@ -20,10 +20,10 @@ export class Section2Component implements OnInit {
       period: 'Mayo 2022 - presente',
       location: 'Gran Santiago, Chile',
       bullets: [
-        'Desarrollo e implementacion de soluciones web y de escritorio para gestion empresarial.',
-        'Diseno y optimizacion de bases de datos SQL Server para informacion critica.',
-        'Integracion de servicios RESTful y microservicios en arquitecturas escalables.',
-        'Automatizacion de flujos internos y reduccion de tiempos operativos.'
+        'Desarrollo e implementación de soluciones web y de escritorio para gestión empresarial.',
+        'Diseño y optimización de bases de datos MySQL y PostgreSQL para información crítica.',
+        'Integración de servicios RESTful y microservicios en arquitecturas escalables.',
+        'Automatización de flujos internos y reducción de tiempos operativos.'
       ]
     },
     {
@@ -33,8 +33,8 @@ export class Section2Component implements OnInit {
       location: 'Santiago, Chile',
       bullets: [
         'Aplicaciones personalizadas en Angular y Node.js para clientes industriales.',
-        'Reportes dinamicos y dashboards interactivos para visualizacion de datos.',
-        'Soporte correctivo y preventivo en proyectos productivos bajo metodologias Scrum.'
+        'Reportes dinámicos y dashboards interactivos para visualización de datos.',
+        'Soporte correctivo y preventivo en proyectos productivos bajo metodologías Scrum.'
       ]
     },
     {
@@ -45,16 +45,16 @@ export class Section2Component implements OnInit {
       bullets: [
         'Sitios web y plataformas internas con PHP, JavaScript y MySQL.',
         'Interfaces responsivas con HTML5, CSS3 y Bootstrap.',
-        'Optimizacion de carga, mejoras de usabilidad y levantamiento directo con clientes.'
+        'Optimización de carga, mejoras de usabilidad y levantamiento directo con clientes.'
       ]
     },
     {
-      company: 'Funeraria Ibanez / Farmacias Ahumada',
-      role: 'Practicas TI y desarrollo',
+      company: 'Funeraria Ibáñez / Farmacias Ahumada',
+      role: 'Prácticas TI y desarrollo',
       period: '2019 - 2020',
       location: 'Santiago, Chile',
       bullets: [
-        'Modulos de gestion interna en PHP, formularios electronicos y digitalizacion de procesos.',
+        'Módulos de gestión interna en PHP, formularios electrónicos y digitalización de procesos.',
         'Soporte a sistemas internos, bases de datos, reportes e incidencias de usuarios.'
       ]
     }

@@ -32,7 +32,7 @@ export class Section5Component implements OnInit {
   apps: DeployedApp[] = [
     {
       name: 'Ingreso Egreso App',
-      description: 'Aplicacion full stack para el registro y control de ingresos y egresos, con graficos de resumen, autenticacion de usuarios via Firebase y backend propio desplegado en Railway.',
+      description: 'Aplicación full stack para el registro y control de ingresos y egresos, con gráficos de resumen, autenticación de usuarios vía Firebase y backend propio desplegado en Railway.',
       tech: ['Angular 20', 'Firebase', 'NgRx', 'Chart.js', 'Bootstrap', 'NestJS', 'TypeORM', 'Railway'],
       deployed: true,
       demoUrl: 'https://ingresos-egresos.yoryopkrk.cl',
@@ -41,7 +41,7 @@ export class Section5Component implements OnInit {
     },
     {
       name: 'Photo Gallery',
-      description: 'Galeria de fotos multiplataforma para capturar, almacenar y administrar imagenes desde el navegador o dispositivos moviles.',
+      description: 'Galería de fotos multiplataforma para capturar, almacenar y administrar imágenes desde el navegador o dispositivos móviles.',
       tech: ['Angular 17', 'Ionic', 'Capacitor', 'TypeScript'],
       deployed: true,
       demoUrl: 'https://photo-gallery.yoryopkrk.cl',
@@ -49,7 +49,7 @@ export class Section5Component implements OnInit {
     },
     {
       name: 'Orbital Spheres',
-      description: 'Juego web construido con Phaser, preparado para empaquetarse como app movil nativa via Capacitor.',
+      description: 'Juego web construido con Phaser, preparado para empaquetarse como app móvil nativa vía Capacitor.',
       tech: ['TypeScript', 'Vite', 'Phaser', 'Capacitor'],
       deployed: true,
       demoUrl: 'https://orbital-spheres.yoryopkrk.cl'

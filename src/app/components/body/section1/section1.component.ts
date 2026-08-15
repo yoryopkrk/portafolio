@@ -19,7 +19,7 @@ export class Section1Component implements OnInit {
   highlights = [
     'Desarrollo web full stack con Angular, Node.js y NestJS.',
     'Experiencia en sistemas empresariales, reportes, dashboards y automatizacion.',
-    'Bases de datos SQL Server, integraciones RESTful y microservicios escalables.'
+    'Bases de datos MySQL y PostgreSQL, integraciones RESTful y microservicios escalables.'
   ];
 
   faGithub = faGithub;
