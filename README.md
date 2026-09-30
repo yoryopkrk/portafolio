@@ -1,27 +1,46 @@
-# Portafolio
+# Portafolio — Jorge Sánchez Venegas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+Sitio web personal desarrollado con Angular 22, desplegado en Cloudflare Pages.
 
-## Development server
+## Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular 22** — framework principal (NgModules, lazy loading, reactive forms)
+- **Bootstrap 5** — estilos y layout responsivo
+- **RxJS** — manejo de observables en el formulario de contacto
+- **Chart.js** — (dependencia instalada, disponible para visualizaciones)
+- **SweetAlert2** — alertas y notificaciones de usuario
+- **Prettier** — formateo de código
 
-## Code scaffolding
+## Estructura
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+src/app/
+├── components/body/        # Secciones del portafolio (hero, experiencia, proyectos, contacto, aplicaciones)
+├── core/                   # Servicios (mail, contacto) y modelos
+├── privacy-policy/         # Página de política de privacidad
+├── not-found/              # Página 404
+└── app-routing.module.ts   # Enrutamiento con lazy loading
+```
+
+## Desarrollo local
+
+```bash
+npm install
+ng serve
+# http://localhost:4200
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+ng build
+# Artefactos en dist/portafolio/
+```
 
-## Running unit tests
+## Deploy
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+El sitio se despliega automáticamente en **Cloudflare Pages** al hacer push a la rama `main`.
 
-## Running end-to-end tests
+## Backend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+El formulario de contacto consume una API propia en NestJS: [contacto-backend](https://github.com/yoryopkrk/contacto-backend)

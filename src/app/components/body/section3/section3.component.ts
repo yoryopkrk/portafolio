@@ -33,6 +33,8 @@ export class Section3Component implements OnInit {
 
   skills = [
     'Angular',
+    'RxJS',
+    'NgRx',
     'Node.js',
     'NestJS',
     'TypeScript',
@@ -40,9 +42,17 @@ export class Section3Component implements OnInit {
     'PHP',
     'MySQL',
     'PostgreSQL',
+    'Docker',
+    'Docker Compose',
     'Bootstrap',
     'RESTful APIs',
     'Microservicios',
+    'Git',
+    'Prettier',
+    'Cloudflare',
+    'Supabase',
+    'Render',
+    'Resend',
     'Google Cloud Platform (GCP)',
     'Google Kubernetes Engine',
     'Scrum'

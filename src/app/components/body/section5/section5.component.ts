@@ -32,7 +32,7 @@ export class Section5Component implements OnInit {
   apps: DeployedApp[] = [
     {
       name: 'Ingreso Egreso App',
-      description: 'Aplicación full stack de finanzas personales: permite registrar ingresos y egresos, categorizarlos y hacer seguimiento del balance mediante gráficos de resumen. Cuenta con autenticación de usuarios vía Firebase y un backend propio en NestJS desplegado en Railway.',
+      description: 'Aplicación full stack de finanzas personales con manejo de estado centralizado en NgRx (actions, reducers, selectors) para el flujo de transacciones y la autenticación. Incluye rutas protegidas con guards, estadísticas visuales con Chart.js, autenticación vía Firebase Auth y backend propio en NestJS con TypeORM.',
       tech: ['Angular 20', 'Firebase', 'NgRx', 'Chart.js', 'Bootstrap', 'NestJS', 'TypeORM', 'Railway'],
       deployed: true,
       demoUrl: 'https://ingresos-egresos.yoryopkrk.cl',
@@ -46,6 +46,21 @@ export class Section5Component implements OnInit {
       deployed: true,
       demoUrl: 'https://photo-gallery.yoryopkrk.cl',
       githubUrl: 'https://github.com/yoryopkrk/photo-gallery-ionic'
+    },
+    {
+      name: 'Portafolio personal',
+      description: 'Este mismo sitio: portafolio desarrollado en Angular 22 con formulario de contacto funcional, sección de proyectos, experiencia laboral y política de privacidad. Desplegado en Cloudflare Pages con deploy automático desde GitHub.',
+      tech: ['Angular 22', 'Bootstrap', 'RxJS', 'TypeScript', 'Cloudflare Pages'],
+      deployed: true,
+      demoUrl: 'https://yoryopkrk.cl',
+      githubUrl: 'https://github.com/yoryopkrk/portafolio'
+    },
+    {
+      name: 'Contacto Backend',
+      description: 'API REST en NestJS que respalda el formulario de contacto del portafolio: guarda mensajes en PostgreSQL (Supabase) y envía emails con Resend. Incluye throttling por IP, validación con class-validator y rutas protegidas con API key.',
+      tech: ['NestJS', 'TypeORM', 'PostgreSQL', 'Supabase', 'Resend', 'Render'],
+      deployed: true,
+      githubUrl: 'https://github.com/yoryopkrk/contacto-backend'
     },
     {
       name: 'Orbital Spheres',
