@@ -23,7 +23,8 @@ export class Section2Component implements OnInit {
         'Desarrollo e implementación de soluciones web y de escritorio para gestión empresarial.',
         'Diseño y optimización de bases de datos MySQL y PostgreSQL para información crítica.',
         'Integración de servicios RESTful y microservicios en arquitecturas escalables.',
-        'Automatización de flujos internos y reducción de tiempos operativos.'
+        'Automatización de flujos internos y reducción de tiempos operativos.',
+        'Participación en 4 proyectos internos, incluyendo uno en producción utilizado en al menos 7 faenas de la empresa.'
       ]
     },
     {

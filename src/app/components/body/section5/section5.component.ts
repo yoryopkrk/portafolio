@@ -32,7 +32,7 @@ export class Section5Component implements OnInit {
   apps: DeployedApp[] = [
     {
       name: 'Ingreso Egreso App',
-      description: 'Aplicación full stack para el registro y control de ingresos y egresos, con gráficos de resumen, autenticación de usuarios vía Firebase y backend propio desplegado en Railway.',
+      description: 'Aplicación full stack de finanzas personales: permite registrar ingresos y egresos, categorizarlos y hacer seguimiento del balance mediante gráficos de resumen. Cuenta con autenticación de usuarios vía Firebase y un backend propio en NestJS desplegado en Railway.',
       tech: ['Angular 20', 'Firebase', 'NgRx', 'Chart.js', 'Bootstrap', 'NestJS', 'TypeORM', 'Railway'],
       deployed: true,
       demoUrl: 'https://ingresos-egresos.yoryopkrk.cl',
@@ -41,7 +41,7 @@ export class Section5Component implements OnInit {
     },
     {
       name: 'Photo Gallery',
-      description: 'Galería de fotos multiplataforma para capturar, almacenar y administrar imágenes desde el navegador o dispositivos móviles.',
+      description: 'Galería de fotos multiplataforma construida con Ionic y Capacitor: permite tomar fotos con la cámara del dispositivo (o subirlas desde el navegador), guardarlas localmente y administrarlas desde una interfaz común para web y móvil.',
       tech: ['Angular 17', 'Ionic', 'Capacitor', 'TypeScript'],
       deployed: true,
       demoUrl: 'https://photo-gallery.yoryopkrk.cl',
@@ -49,7 +49,7 @@ export class Section5Component implements OnInit {
     },
     {
       name: 'Orbital Spheres',
-      description: 'Juego web construido con Phaser, preparado para empaquetarse como app móvil nativa vía Capacitor.',
+      description: 'Juego arcade ambientado en el espacio, desarrollado con Phaser y TypeScript, con sistema de progresión (monedas y logros) y varias escenas de juego. Corre en el navegador y está preparado para empaquetarse como app móvil nativa vía Capacitor, pensando en su publicación en Google Play.',
       tech: ['TypeScript', 'Vite', 'Phaser', 'Capacitor'],
       deployed: true,
       demoUrl: 'https://orbital-spheres.yoryopkrk.cl'
