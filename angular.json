@@ -29,6 +29,7 @@
             "assets": [
               "src/favicon.ico",
               "src/ads.txt",
+              "src/robots.txt",
               "src/assets"
             ],
             "styles": [
