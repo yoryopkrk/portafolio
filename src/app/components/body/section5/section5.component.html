@@ -37,6 +37,10 @@
                         <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
                         Descargar APK
                     </a>
+                    <a *ngIf="app.swaggerUrl" [href]="app.swaggerUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
+                        <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
+                        Ver Swagger
+                    </a>
                 </div>
             </article>
         </div>

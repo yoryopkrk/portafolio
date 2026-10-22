@@ -14,6 +14,7 @@ interface DeployedApp {
   githubUrl?: string;
   backendGithubUrl?: string;
   apkUrl?: string;
+  swaggerUrl?: string;
 }
 
 @Component({
@@ -35,13 +36,19 @@ export class Section5Component implements OnInit {
   apps: DeployedApp[] = [
     {
       name: 'Ingreso Egreso App',
-      description: 'Aplicación full stack de finanzas personales con manejo de estado centralizado en NgRx (actions, reducers, selectors) para el flujo de transacciones y la autenticación. Incluye rutas protegidas con guards, estadísticas visuales con Chart.js, autenticación vía Firebase Auth y backend propio en NestJS con TypeORM.',
-      tech: ['Angular 20', 'Firebase', 'NgRx', 'Chart.js', 'Bootstrap', 'NestJS', 'TypeORM', 'Railway'],
+      description: 'Aplicación full stack de finanzas personales con manejo de estado centralizado en NgRx (actions, reducers, selectors) para el flujo de transacciones y la autenticación. Incluye rutas protegidas con guards, estadísticas visuales con Chart.js y autenticación vía Firebase Auth.',
+      tech: ['Angular 20', 'Firebase', 'NgRx', 'Chart.js', 'Bootstrap', 'Cloudflare Pages'],
       deployed: true,
       demoUrl: 'https://ingresos-egresos.yoryopkrk.cl',
       demoCredentials: 'demo@yoryopkrk.cl / Demo2026!',
-      githubUrl: 'https://github.com/yoryopkrk/ingreso-egreso-app-4.0.0',
-      backendGithubUrl: 'https://github.com/yoryopkrk/nestjs-auth-typeorm'
+      githubUrl: 'https://github.com/yoryopkrk/ingreso-egreso-app-4.0.0'
+    },
+    {
+      name: 'API E-commerce (NestJS)',
+      description: 'API REST de práctica para un catálogo de e-commerce (productos, categorías, marcas, clientes y órdenes), construida en NestJS: autenticación JWT con Passport (estrategias local y JWT), roles de usuario, contraseñas con bcrypt y persistencia con TypeORM sobre MySQL/PostgreSQL. Documentada con Swagger.',
+      tech: ['NestJS', 'TypeORM', 'Passport JWT', 'Swagger', 'Railway'],
+      deployed: false,
+      githubUrl: 'https://github.com/yoryopkrk/nestjs-auth-typeorm'
     },
     {
       name: 'Photo Gallery',
@@ -55,7 +62,7 @@ export class Section5Component implements OnInit {
     },
     {
       name: 'Portafolio personal',
-      description: 'Este mismo sitio: portafolio desarrollado en Angular 22 con formulario de contacto funcional, sección de proyectos, experiencia laboral y política de privacidad. Desplegado en Cloudflare Pages con deploy automático desde GitHub.',
+      description: 'Este mismo sitio: portafolio desarrollado en Angular 22 con formulario de contacto funcional, sección de proyectos, experiencia laboral y política de privacidad. Optimizado para SEO (Open Graph, datos estructurados JSON-LD, robots.txt) y desplegado en Cloudflare Pages con deploy automático desde GitHub.',
       tech: ['Angular 22', 'Bootstrap', 'RxJS', 'TypeScript', 'Cloudflare Pages'],
       deployed: true,
       demoUrl: 'https://yoryopkrk.cl',
@@ -66,12 +73,13 @@ export class Section5Component implements OnInit {
       description: 'API REST en NestJS que respalda el formulario de contacto del portafolio: guarda mensajes en PostgreSQL (Supabase) y envía emails con Resend. Incluye throttling por IP, validación con class-validator y rutas protegidas con API key.',
       tech: ['NestJS', 'TypeORM', 'PostgreSQL', 'Supabase', 'Resend', 'Render'],
       deployed: true,
-      githubUrl: 'https://github.com/yoryopkrk/contacto-backend'
+      githubUrl: 'https://github.com/yoryopkrk/contacto-backend',
+      swaggerUrl: 'https://contacto-backend-2qef.onrender.com/api/v1/docs'
     },
     {
       name: 'Orbital Spheres',
       description: 'Juego arcade ambientado en el espacio, desarrollado con Phaser y TypeScript, con sistema de progresión (monedas y logros) y varias escenas de juego. Corre en el navegador y está preparado para empaquetarse como app móvil nativa vía Capacitor, pensando en su publicación en Google Play.',
-      tech: ['TypeScript', 'Vite', 'Phaser', 'Capacitor'],
+      tech: ['TypeScript', 'Vite', 'Phaser', 'Capacitor', 'Cloudflare Pages'],
       deployed: true,
       demoUrl: 'https://orbital-spheres.yoryopkrk.cl'
     }
