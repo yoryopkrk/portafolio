@@ -9,6 +9,7 @@ interface DeployedApp {
   tech: string[];
   deployed: boolean;
   demoUrl?: string;
+  demoCredentials?: string;
   githubUrl?: string;
   backendGithubUrl?: string;
 }
@@ -36,6 +37,7 @@ export class Section5Component implements OnInit {
       tech: ['Angular 20', 'Firebase', 'NgRx', 'Chart.js', 'Bootstrap', 'NestJS', 'TypeORM', 'Railway'],
       deployed: true,
       demoUrl: 'https://ingresos-egresos.yoryopkrk.cl',
+      demoCredentials: 'demo@yoryopkrk.cl / Demo2026!',
       githubUrl: 'https://github.com/yoryopkrk/ingreso-egreso-app-4.0.0',
       backendGithubUrl: 'https://github.com/yoryopkrk/nestjs-auth-typeorm'
     },

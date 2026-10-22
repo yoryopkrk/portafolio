@@ -20,11 +20,11 @@ export class Section2Component implements OnInit {
       period: 'Mayo 2022 - presente',
       location: 'Gran Santiago, Chile',
       bullets: [
-        'Desarrollo e implementación de soluciones web y de escritorio para gestión empresarial.',
-        'Diseño y optimización de bases de datos MySQL y PostgreSQL para información crítica.',
-        'Integración de servicios RESTful y microservicios en arquitecturas escalables.',
-        'Automatización de flujos internos y reducción de tiempos operativos.',
-        'Participación en 4 proyectos internos, incluyendo uno en producción utilizado en al menos 7 faenas de la empresa.'
+        'Soporte, despliegue y mejora continua durante los últimos 4 años del sistema de gestión insignia de la empresa: implementado en al menos 7 entornos de producción (2 actualmente activos); actualmente desarrollo su nueva versión.',
+        'Desarrollo de una aplicación de checklists de inspección vehicular para una flota de camionetas, recién puesta en producción y en uso activo por un cliente.',
+        'Desarrollo y evaluación de otros 2 sistemas de gestión interna, desde el frontend hasta la arquitectura completa.',
+        'Diseño y optimización de bases de datos MySQL y PostgreSQL para información crítica del negocio.',
+        'Integración de servicios RESTful y microservicios en arquitecturas escalables.'
       ]
     },
     {

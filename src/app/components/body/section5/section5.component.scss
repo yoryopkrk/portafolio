@@ -90,6 +90,21 @@
     padding: 8px 10px;
 }
 
+.app-card p.demo-credentials {
+    background: rgba(2, 132, 199, 0.06);
+    border: 1px dashed rgba(2, 132, 199, 0.3);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-top: 14px;
+    padding: 8px 12px;
+}
+
+.demo-credentials code {
+    color: #0369a1;
+    font-weight: 700;
+}
+
 .app-card__actions {
     display: flex;
     flex-wrap: wrap;

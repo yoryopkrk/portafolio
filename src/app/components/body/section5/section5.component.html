@@ -17,6 +17,9 @@
                 <div class="stack-list">
                     <span *ngFor="let tech of app.tech">{{ tech }}</span>
                 </div>
+                <p *ngIf="app.demoCredentials" class="demo-credentials">
+                    Credenciales de prueba: <code>{{ app.demoCredentials }}</code>
+                </p>
                 <div class="app-card__actions">
                     <a *ngIf="app.demoUrl" [href]="app.demoUrl" target="_blank" rel="noopener noreferrer" class="app-link">
                         <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
