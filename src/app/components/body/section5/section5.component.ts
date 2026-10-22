@@ -9,9 +9,11 @@ interface DeployedApp {
   tech: string[];
   deployed: boolean;
   demoUrl?: string;
+  demoLabel?: string;
   demoCredentials?: string;
   githubUrl?: string;
   backendGithubUrl?: string;
+  apkUrl?: string;
 }
 
 @Component({
@@ -43,11 +45,13 @@ export class Section5Component implements OnInit {
     },
     {
       name: 'Photo Gallery',
-      description: 'Galería de fotos multiplataforma construida con Ionic y Capacitor: permite tomar fotos con la cámara del dispositivo (o subirlas desde el navegador), guardarlas localmente y administrarlas desde una interfaz común para web y móvil.',
-      tech: ['Angular 17', 'Ionic', 'Capacitor', 'TypeScript'],
+      description: 'Galería de fotos multiplataforma construida con Ionic y Capacitor: permite tomar fotos con la cámara del dispositivo (o subirlas desde el navegador), marcarlas como favoritas, verlas en un visor ampliado y eliminarlas con confirmación. El APK para Android se compila, firma y publica automáticamente en cada release mediante un pipeline de GitHub Actions.',
+      tech: ['Angular 17', 'Ionic', 'Capacitor', 'TypeScript', 'GitHub Actions', 'Cloudflare Pages'],
       deployed: true,
       demoUrl: 'https://photo-gallery.yoryopkrk.cl',
-      githubUrl: 'https://github.com/yoryopkrk/photo-gallery-ionic'
+      demoLabel: 'Ver aplicación web',
+      githubUrl: 'https://github.com/yoryopkrk/photo-gallery-ionic',
+      apkUrl: 'https://github.com/yoryopkrk/photo-gallery-ionic/releases/latest'
     },
     {
       name: 'Portafolio personal',

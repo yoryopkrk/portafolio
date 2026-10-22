@@ -23,7 +23,7 @@
                 <div class="app-card__actions">
                     <a *ngIf="app.demoUrl" [href]="app.demoUrl" target="_blank" rel="noopener noreferrer" class="app-link">
                         <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
-                        Ver aplicación
+                        {{ app.demoLabel || 'Ver aplicación' }}
                     </a>
                     <a *ngIf="app.githubUrl" [href]="app.githubUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
                         <fa-icon [icon]="faGithub"></fa-icon>
@@ -32,6 +32,10 @@
                     <a *ngIf="app.backendGithubUrl" [href]="app.backendGithubUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
                         <fa-icon [icon]="faGithub"></fa-icon>
                         Ver backend
+                    </a>
+                    <a *ngIf="app.apkUrl" [href]="app.apkUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
+                        <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
+                        Descargar APK
                     </a>
                 </div>
             </article>
