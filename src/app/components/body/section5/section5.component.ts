@@ -47,8 +47,11 @@ export class Section5Component implements OnInit {
       name: 'API E-commerce (NestJS)',
       description: 'API REST de práctica para un catálogo de e-commerce (productos, categorías, marcas, clientes y órdenes), construida en NestJS: autenticación JWT con Passport (estrategias local y JWT), roles de usuario, contraseñas con bcrypt y persistencia con TypeORM sobre MySQL/PostgreSQL. Documentada con Swagger.',
       tech: ['NestJS', 'TypeORM', 'Passport JWT', 'Swagger', 'Railway'],
-      deployed: false,
-      githubUrl: 'https://github.com/yoryopkrk/nestjs-auth-typeorm'
+      deployed: true,
+      demoUrl: 'https://nestjs-auth-typeorm.up.railway.app',
+      demoLabel: 'Ver API',
+      githubUrl: 'https://github.com/yoryopkrk/nestjs-auth-typeorm',
+      swaggerUrl: 'https://nestjs-auth-typeorm.up.railway.app/docs'
     },
     {
       name: 'Photo Gallery',
