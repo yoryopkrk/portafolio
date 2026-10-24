@@ -1,11 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { forkJoin } from 'rxjs';
 
 import { faArrowUpRightFromSquare, faCircleCheck, faTimesCircle, faSpinner, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { ContactoService } from '@services/contacto.service';
-import { MailService } from '@services/mail-service.service';
 
 @Component({
   standalone: false,
@@ -22,17 +20,16 @@ export class Section4Component implements OnInit {
 
   constructor(
     public fb: FormBuilder,
-    private contactoService: ContactoService,
-    private mailService: MailService
+    private contactoService: ContactoService
   ) { }
 
   ngOnInit(): void {
     this.submitForm = this.fb.group({
       id: '',
-      nombre: ['', [Validators.required, Validators.minLength(3)]],
-      correo: ['', [Validators.required, Validators.email]],
-      telefono: '',
-      comentario: ['', Validators.required]
+      nombre: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(100)]],
+      correo: ['', [Validators.required, Validators.email, Validators.maxLength(254)]],
+      telefono: ['', Validators.maxLength(30)],
+      comentario: ['', [Validators.required, Validators.maxLength(5000)]]
     });
   }
 
@@ -48,21 +45,6 @@ export class Section4Component implements OnInit {
 
     const { nombre, correo, telefono, comentario } = this.submitForm.value;
 
-    let email = 'jor.sanchezv.90@gmail.com';
-
-    let infoCorreo = {
-      cualNotificacion: 0,
-      nombre: nombre,
-      email: email,
-      mensaje: comentario
-    }
-
-    let correoRespuesta = {
-      cualNotificacion: 1,
-      nombre: nombre,
-      email: correo
-    }
-
     let correoObj = {
       nombre: nombre,
       correo: correo,
@@ -77,11 +59,8 @@ export class Section4Component implements OnInit {
     this.mensaje = '';
     this.huboError = false;
 
-    forkJoin([
-      this.mailService.createTransport(infoCorreo),
-      this.mailService.createTransport(correoRespuesta),
-      this.contactoService.postContacto(correoObj)
-    ]).subscribe({
+    // El servidor guarda el mensaje y envia el aviso y la respuesta automatica.
+    this.contactoService.postContacto(correoObj).subscribe({
       next: () => {
         this.cargando = false;
         this.mensaje = 'Mensaje enviado correctamente';
