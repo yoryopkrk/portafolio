@@ -81,7 +81,7 @@ export class Section5Component implements OnInit {
     },
     {
       name: 'Orbital Spheres',
-      description: 'Juego arcade ambientado en el espacio, desarrollado con Phaser y TypeScript, con sistema de progresión (monedas y logros) y varias escenas de juego. Corre en el navegador y está preparado para empaquetarse como app móvil nativa vía Capacitor, pensando en su publicación en Google Play.',
+      description: 'Juego arcade de bolas de colores estilo Zuma, desarrollado con Phaser y TypeScript: encadena y elimina bolas antes de que lleguen al final del camino, con distintos escenarios, sistema de progresión (monedas y logros) y varios niveles. Corre en el navegador y está preparado para empaquetarse como app móvil nativa vía Capacitor, pensando en su publicación en Google Play.',
       tech: ['TypeScript', 'Vite', 'Phaser', 'Capacitor', 'Cloudflare Pages'],
       deployed: true,
       demoUrl: 'https://orbital-spheres.yoryopkrk.cl'
