@@ -41,6 +41,10 @@
                         <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
                         Ver Swagger
                     </a>
+                    <a *ngIf="app.playStoreUrl" [href]="app.playStoreUrl" target="_blank" rel="noopener noreferrer" class="app-link app-link--secondary">
+                        <fa-icon [icon]="faGooglePlay"></fa-icon>
+                        Google Play
+                    </a>
                 </div>
             </article>
         </div>

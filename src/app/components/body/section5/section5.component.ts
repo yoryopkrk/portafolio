@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 
 interface DeployedApp {
   name: string;
@@ -15,6 +15,7 @@ interface DeployedApp {
   backendGithubUrl?: string;
   apkUrl?: string;
   swaggerUrl?: string;
+  playStoreUrl?: string;
 }
 
 @Component({
@@ -32,6 +33,7 @@ export class Section5Component implements OnInit {
 
   faArrowUpRightFromSquare = faArrowUpRightFromSquare;
   faGithub = faGithub;
+  faGooglePlay = faGooglePlay;
 
   apps: DeployedApp[] = [
     {
@@ -81,10 +83,11 @@ export class Section5Component implements OnInit {
     },
     {
       name: 'Orbital Spheres',
-      description: 'Juego arcade de bolas de colores estilo Zuma, desarrollado con Phaser y TypeScript: encadena y elimina bolas antes de que lleguen al final del camino, con distintos escenarios, sistema de progresión (monedas y logros) y varios niveles. Corre en el navegador y está preparado para empaquetarse como app móvil nativa vía Capacitor, pensando en su publicación en Google Play.',
+      description: 'Juego arcade de bolas de colores estilo Zuma, desarrollado con Phaser y TypeScript: encadena y elimina bolas antes de que lleguen al final del camino, con distintos escenarios, sistema de progresión (monedas y logros) y varios niveles. Corre en el navegador y empaquetado como app móvil nativa vía Capacitor, actualmente publicado en Google Play.',
       tech: ['TypeScript', 'Vite', 'Phaser', 'Capacitor', 'Cloudflare Pages'],
       deployed: true,
-      demoUrl: 'https://orbital-spheres.yoryopkrk.cl'
+      demoUrl: 'https://orbital-spheres.yoryopkrk.cl',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.yoryopkrkdev.orbitalspheres'
     }
   ];
 }
